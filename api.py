@@ -1,11 +1,9 @@
 from flask import Flask, jsonify
 from werkzeug.utils import secure_filename
 from flask import request
-from flask_cors import CORS
 import time, os, random
 import mysql.connector
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
 app.config['JSON_AS_ASCII'] = False
 i, y, filename, filePath = 0, 0, ['', '', '', '', ''], ['', '', '', '', '']
 def createdb(value):
